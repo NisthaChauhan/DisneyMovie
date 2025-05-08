@@ -12,7 +12,7 @@ df['cast'] = df['cast'].fillna('No Cast')
 df['country'] = df['country'].fillna('Unknown')
 df['rating'] = df['rating'].fillna('NR')
 df['duration'] = df['duration'].fillna('0')
-
+    
 # Feature Engineering
 df['duration_numeric'] = df['duration'].str.extract(r'(\d+)').astype(float)
 df['date_added'] = pd.to_datetime(df['date_added'], errors='coerce')
